@@ -2,8 +2,11 @@ import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, ScrollView, Image, ToastAndroid } from 'react-native';
 import ProgressBar from 'react-native-progress/Bar';
 import styles from '../../styles/styles';
+import { useNavigation } from '@react-navigation/native';
 
 const QuestionScreen = () => {
+const navigation = useNavigation();
+
   const questions = [
     "What would you like to learn?",
     "How did you hear about Nsango?",
@@ -58,6 +61,7 @@ const QuestionScreen = () => {
       setSelectedOption(null);
     } else {
       ToastAndroid.show('Questionnaire Completed', ToastAndroid.SHORT);
+      navigation.navigate('HomeScreen');
     }
   };
 

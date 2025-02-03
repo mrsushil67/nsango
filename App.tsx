@@ -6,6 +6,7 @@ import LoginScreen  from "./src/screens/LoginScreen";
 import QuestionScreen  from "./src/screens/QuestionScreen";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
+import HomeScreen from "./src/screens/HomeScreen";
 
 const Stack = createStackNavigator();
 
@@ -17,6 +18,7 @@ const Stack = createStackNavigator();
       <Stack.Screen name="GetStartedScreen" component={GetStartedScreen} />
       <Stack.Screen name="LoginScreen" component={LoginScreen} />
       <Stack.Screen name="QuestionScreen" component={QuestionScreen} />
+      <Stack.Screen name="HomeScreen" component={HomeScreen} />
     </Stack.Navigator>
   </NavigationContainer>
   )
